@@ -1,23 +1,19 @@
-// This is where project configuration and plugin options are located.
-// Learn more: https://gridsome.org/docs/config
-
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
-
-
+https://www.nws-alumni.go.yj.fr
 module.exports = {
+  siteName: 'Worpdress Headless',
   plugins: [
     {
+      // use: 'gridsome-source-wordpress',
       use: '@gridsome/source-wordpress',
       options: {
-        baseUrl: 'https://www.nws-alumni.go.yj.fr/', // required
-        typeName: 'WordPress', // GraphQL schema name
+        baseUrl: 'https://www.nws-alumni.go.yj.fr',
+        // baseUrl: 'http://wordpress.loc',
+        // apiBase: 'wp-json/wp/v2'
       }
-    }
+    },
+    // À utiliser avec @gridsome/source-wordpress
   ],
-  // Setup template routes for any WordPress collection
   templates: {
-    WordPressPost: '/:year/:month/:day/:slug',
-    WordPressTag: '/tag/:slug'
+    WordPressPost: '/blog/:slug'
   },
 }

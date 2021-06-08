@@ -2,9 +2,9 @@
   <Layout>
     <div class="nav_barre">
         <g-image alt="Example image" src="~/lo.png" width="120" height="50" />
-         <g-image alt="Example image" src="~/home.png" width="53" height="53" />
-          <g-image alt="Example image" src="~/profie.png" width="53" height="53" />
-           <g-image alt="Example image" src="~/calendar.png" width="53" height="53" />
+          <g-link class="nav__link" to="/"><g-image alt="Example image" src="~/home.png" width="53" height="53" /></g-link>
+           <g-link class="nav__link" to="/alumnis/"> <g-image alt="Example image" src="~/profie.png" width="53" height="53" /></g-link>
+         <g-link class="nav__link" to="/calendar/"> <g-image alt="Example image" src="~/calendar.png" width="53" height="53" /></g-link>
 
    </div>
 <div class="title-seconde">
@@ -22,11 +22,6 @@
     <div class="card">
      <g-image alt="Example image" src="~/alumnis.jpg" width="1116" height="379" />
     </div>
-  
-
-
- 
- 
     <footer class="footer">
     <p class="home-links">
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
@@ -43,6 +38,8 @@ export default {
   }
 }
 </script>
+
+
 
 <style>
 .home-links a {
@@ -121,8 +118,10 @@ body{
 
  /*tes images auront une marge de 5px a gauche*/
  
-g-image{
-margin-left : 20px /*tes images auront une marge de 5px a gauche*/
+.nav__link:active{
+  color:#f7eb07 ;
+
+
 }
 
 
